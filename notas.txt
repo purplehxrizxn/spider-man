@@ -1,0 +1,12 @@
+styleguide: estabelece padrões de marca, de logo, de cores
+de componentes como botões e cards, tipografia e etc. para auxiliar no desenvolvimento da interface. tanto pra mobile tanto pra web. também a família de ícones.
+
+para pegar referencias, podemos utilizar: lapa.ninja, dribbble, behance, etc...
+
+tentar pegar os padrões das referências para melhor utilização.
+
+após pegar as referências, definir os grids no figma.
+
+padrão bootstrap: 12 colunas, 72px de width e gutter de 24px
+
+padrão de container com 1440px: 12 colunas, 96px de width

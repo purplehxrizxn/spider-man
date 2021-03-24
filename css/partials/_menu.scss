@@ -1,0 +1,113 @@
+header { 
+    width: 100%;
+    padding-top: 16px;
+}
+
+.navbar { 
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vw;
+}
+
+.nav-menu { 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.nav-list { 
+    list-style: none;
+    display: flex;
+
+    li { 
+        margin-left: 24px;
+    }
+
+    @include responsive () { 
+        display: none;
+    }
+}
+
+.logo { 
+    max-width: 72px;
+}
+
+.nav-link {
+    display: inline-block;
+    // inline-block leva em consideração o conteúdo da div e se ajusta automáticamente usando-o.
+
+    color: $grey-3;
+    padding: 8px 16px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 200px;
+    position: relative;
+    transition: color .5s ease;
+
+    &::after { 
+        content: '';
+        display: block;
+        position: absolute;
+
+        width: 2px;
+        height: 0px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #FB0000 100%);
+        left: 50%;
+        top: -40px;
+        transition: .5s ease;
+    }
+
+    &:hover {
+        color: $white-light;
+
+        &::after {
+            height: 40px
+        }
+    }
+}
+
+.nav-social { 
+    display: flex;
+
+    @include responsive () { 
+        display: none;
+    }
+
+     svg { 
+        margin-left: 16px;
+        transition: background .5s ease;
+        cursor: pointer;
+
+
+        path, circle{ 
+            transition: .5s ease;
+        }
+
+        &:hover { 
+            path, circle { 
+                fill: $red-light;
+                transform: translate3d(0, -3px, 0);
+            }
+        }
+     }
+}
+
+.bx { 
+
+    @include responsive () {
+        display: block;
+    }
+
+    display:none; 
+
+    width: 48px;
+    height: 48px;
+
+    background: $white;
+    border-radius: 8px;
+}
